@@ -7,7 +7,7 @@ export async function listarUsuarios() {
     return resultado
 }
 
-export async function buscarUsuarios(id) {
+export async function buscarPorId(id) {
     const [resultado] = await conexao.query(
         "SELECT id, nome, email, criado_em FROM usuarios WHERE id = ?",
         [id]

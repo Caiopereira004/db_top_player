@@ -1,14 +1,14 @@
 import * as model from "../models/partidaModel.js";
 
-export async function listar(req, res) {
+export async function listarPartidas(req, res) {
     res.json(await model.listarPartidas());
 }
 
-export async function buscar(req, res) {
+export async function buscarPartidas(req, res) {
     res.json(await model.buscarPartidas(req.query));
 }
 
-export async function deletar(req, res) {
+export async function deletarPartidas(req, res) {
     await model.deletarPartidas(req.params.id);
     res.json({ msg: "Partida deletada" });
 }
